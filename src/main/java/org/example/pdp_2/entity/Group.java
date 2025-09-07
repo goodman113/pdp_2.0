@@ -19,4 +19,5 @@ public class Group {
     @OneToMany
     private List<User> students;
     private Integer moduleNumber;
+    private Boolean isActive;
 }
