@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import javax.swing.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -17,7 +18,6 @@ public class Lesson {
     private User teacher;
     @ManyToOne
     private Group group;
-    private LocalDateTime startTime;
-    private LocalDateTime endTime;
+    private LocalDate date;
     private Boolean isCompleted;
 }

@@ -14,5 +14,5 @@ public class Room {
     private String name;
     private Integer capacity;
     @OneToMany
-    private List<Lesson> lessons;
+    private List<Group> groups;
 }
