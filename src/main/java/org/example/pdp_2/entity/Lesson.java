@@ -19,5 +19,5 @@ public class Lesson {
     private Group group;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
-
+    private Boolean isCompleted;
 }
