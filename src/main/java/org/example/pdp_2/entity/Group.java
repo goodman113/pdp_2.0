@@ -1,15 +1,20 @@
 package org.example.pdp_2.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import org.example.pdp_2.entity.enums.Days;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "groups")
 public class Group {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,5 +30,6 @@ public class Group {
     private Boolean isActive;
     private LocalTime startTime;
     private LocalTime endTime;
+    @Enumerated(EnumType.STRING)
     private Days lessonDays;
 }

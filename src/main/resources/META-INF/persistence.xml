@@ -3,14 +3,14 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
-    <persistence-unit name="default">
+
+    <persistence-unit name="PDP" transaction-type="RESOURCE_LOCAL">
         <properties>
-            <property name="jakarta.persistence.jdbc.user" value="pdp"/>
-            <property name="jakarta.persistence.jdbc.password" value="gGRPHp6m1EeJybk1JOGGaJ645miba8vq"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/pdp_2"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="root123"/>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://dpg-d2uu47p5pdvs73aspgo0-a.oregon-postgres.render.com:5432/pdp_2?sslmode=require"/>
-
         </properties>
     </persistence-unit>
 </persistence>

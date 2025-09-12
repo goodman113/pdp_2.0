@@ -11,8 +11,8 @@ public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
+    private String number;
     private Integer capacity;
-    @OneToMany
+    @OneToMany(mappedBy = "room")
     private List<Group> groups;
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import javax.swing.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -18,6 +19,7 @@ public class Lesson {
     private User teacher;
     @ManyToOne
     private Group group;
+    private Integer moduleNumber;
     private LocalDate date;
     private Boolean isCompleted;
 }

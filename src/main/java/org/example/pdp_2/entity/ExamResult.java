@@ -1,9 +1,6 @@
 package org.example.pdp_2.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -12,7 +9,9 @@ public class ExamResult {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer examId;
-    private Integer studentId;
+    @ManyToOne
+    private Exam exam;
+    @ManyToOne
+    private User student;
     private Integer studentMark;
 }

@@ -14,6 +14,7 @@ public class Exam {
     @ManyToOne
     private Group group;
     private Integer moduleNumber;
-    @OneToMany
+    @OneToMany(mappedBy = "exam")
     private List<ExamResult> examResults;
+    private Boolean isCompleted;
 }
