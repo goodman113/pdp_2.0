@@ -24,7 +24,7 @@ public class Group {
     private User teacher;
     @ManyToOne
     private Room room;
-    @OneToMany
+    @ManyToMany
     private List<User> students;
     private Integer moduleNumber;
     private Boolean isActive;
